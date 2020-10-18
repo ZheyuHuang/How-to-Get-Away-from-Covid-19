@@ -1,3 +1,7 @@
+.intro{
+    padding-top: 10px;
+}
+
 .center{
     text-align: center;
 }
@@ -23,13 +27,14 @@ body{
 }
 
 .grid{
-    width: 400px;
-    height: 400px;
+    width: 412px;
+    height: 412px;
     display: flex;
     flex-wrap: wrap;
     background-color: goldenrod;
-    padding: 5px;
+    padding: 0px;
     margin: 0 auto;
+    border: 5px solid goldenrod;
 }
 
 .grid div { 
