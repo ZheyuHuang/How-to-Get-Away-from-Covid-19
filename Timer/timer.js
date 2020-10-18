@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     const startButton = document.getElementById('start-button');
     let timeleft = 20;
 
+    startButton.addEventListener('click', countdown());
+
     function countdown(){
         setInterval(function(){
             if(timeleft <= 0){
@@ -13,6 +15,4 @@ document.addEventListener('DOMContentLoaded', () =>{
             timeleft -= 1
         }, 1000);
     }
-
-    startButton.addEventListener('click', countdown())
 })
