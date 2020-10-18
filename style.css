@@ -16,7 +16,7 @@ body{
     gap:10%;
     grid-template-columns: 500px;
     grid-row: auto;
-    margin-bottom:50%;
+    margin-bottom:20%;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -41,6 +41,7 @@ body{
 .card:hover{
      transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    text-decoration: none;
 }
 h1{
     font-family: 'Suez One', serif;
