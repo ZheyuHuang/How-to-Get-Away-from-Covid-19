@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () =>{
                 squares[i+width].innerHTML = 0
             }
         }
-        step +=1
-        stepDisplay.innerHTML = step
+        step +=1;
+        stepDisplay.innerHTML = step;
         checkForWin()
     }
 
