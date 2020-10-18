@@ -1,3 +1,18 @@
+.center{
+    text-align: center;
+}
+
+#guide{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    
+}
+
+body{
+    background-color: rgb(241, 234, 224);
+}
+
 .grid{
     width: 400px;
     height: 400px;
@@ -5,6 +20,7 @@
     flex-wrap: wrap;
     background-color: goldenrod;
     padding: 5px;
+    margin: 0 auto
 }
 
 .grid div { 
@@ -21,6 +37,8 @@
 .step-container{
     width:50px;
     background-color:burlywood;
+    margin: 0 auto;
+    margin-bottom: 3mm;
 }
 
 .step-title{

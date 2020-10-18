@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     //swipe rights
     function moveRight() {
+        let moved = false;
         for(let i=0; i<width*width; i++){
             if (i%width === 0) {
                 let row = []
@@ -49,10 +50,12 @@ document.addEventListener('DOMContentLoaded', () =>{
 
                 for (j=0;j<width;j++){
                     squares[i+j].innerHTML = newRow[j]
+                    moved = true;
                 }
 
             }
         }
+        return moved;
     }
 
     //swipe left
@@ -103,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     //swipe up
     function moveUp() {
+        let moved = false;
         for(let i=0; i<4; i++){
             let column = []
             for (j=0;j<width;j++){
@@ -120,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 squares[i+width*j].innerHTML = newColumn[j]
             }
         }
+        return moved;
     }
 
     function combinedRow(){
@@ -162,23 +167,25 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     //assign keycodes
     function control(e){
-        if(e.keyCode === 39){
+        if(e.keyCode == 39){
             keyRight()
-        }else if(e.keyCode === 37){
+        }else if(e.keyCode == 37){
             keyLeft()
-        }else if(e.keyCode === 38){
+        }else if(e.keyCode == 38){
             keyUp()
-        }else if(e.keyCode === 40){
+        }else if(e.keyCode == 40){
             keyDown()
         }
     }
     document.addEventListener('keyup',control)
 
     function keyRight(){
-        moveRight()
+        tf = moveRight();
         combinedRow()
         moveRight()
+        if (tf){
         generate()
+        }
     }
 
     function keyLeft(){
