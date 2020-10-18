@@ -13,7 +13,7 @@ body{
 .container{
     z-index: 1;
     display:grid;
-    gap:10%;
+    gap:5%;
     grid-template-columns: 500px;
     grid-row: auto;
     margin-bottom:20%;
