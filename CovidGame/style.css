@@ -1,0 +1,31 @@
+.grid{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: goldenrod;
+    padding: 5px;
+}
+
+.grid div { 
+    width:100px;
+    height: 100px;
+    background-color: antiquewhite;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+
+}
+
+.step-container{
+    width:50px;
+    background-color:burlywood;
+}
+
+.step-title{
+    text-align: center;
+}
+#step{
+    text-align: center;
+}
