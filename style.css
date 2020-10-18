@@ -1,16 +1,12 @@
 
-
-html { 
-  }
-
 body{
     font-family: 'Piazzolla', serif;
-    
     background: url(asset/covid.jpg) no-repeat center center fixed;  
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    margin: 0; height: 100%; overflow: hidden
 
 }
 
@@ -18,10 +14,18 @@ body{
     z-index: 1;
     display:grid;
     gap:10%;
-    grid-template-columns: 400px ;
+    grid-template-columns: 500px;
     grid-row: auto;
-}
+    margin-bottom:50%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+
 
 .card{
     
