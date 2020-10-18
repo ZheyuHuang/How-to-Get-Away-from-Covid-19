@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500&family=Suez+One&display=swap" rel="stylesheet">
     <script src="game.js"></script>
     <script src="data.js"></script>
-    <script src="https://kit.fontawesome.com/6811be71ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -32,11 +32,11 @@
                 Covid19 Tips
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Statistical Facts</a>
+                <a class="dropdown-item" href="../index.html">Statistical Facts</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">How to protect yourself</a>
+                <a class="dropdown-item" href="#instructions">How to protect yourself</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Common symptoms of Covid</a>
+                <a class="dropdown-item" href="../index.html">Common symptoms of Covid</a>
               </div>
             </li>
             <!-- <li class="nav-item">
@@ -50,7 +50,7 @@
      </nav>
 
     <div class="intro">
-        <h1 class = "center"><i class="fa fa-hands-wash"></i>Covid Protection Game</h1>
+        <h1 class = "center" style="color:goldenrod"><i class="fa fa-virus"></i>Covid Protection Game</h1>
     </div>
     <div class="step-container">
         <div class="step-title">
@@ -66,6 +66,14 @@
     <p id = "guide">
         <span style="font-weight: bold;">How to play: </span>This game is similar to 2048, and you can use four direction keys to play this game. You will always start with the <span style="font-weight: bold;">basic step "wash your hand at least 20s"</span> and you want to <span style="font-weight: bold;">combine the same step</span> to get a new protection method. You will win the game and protect yourself after you generate <span style="font-weight: bold;">all 5 protection</span> approaches.
     </p>
+
+    <div id="instructions">
+        <p><i class="fa fa-hands-wash"></i>&nbsp;<strong>Wash your hands carefully! </strong><a href="#">Check our hand wash timer here!</a></p>
+        <p><i class="fa fa-pump-medical"></i>&nbsp;Clean & disinfect all surfaces using swipes! Coronavirus could live on smooth surfaces for ~2days. </p>
+        <p><i class="fa fa-laptop-house"></i>&nbsp;Stay 6 feet away from others to prevent yourself from potential virus carriers. Remember, one could be a virus carrier even if he does not have a symptom!</p>
+        <p><i class="fa fa-head-side-mask"></i>&nbsp;Even if you do not show symptoms, wear a mask to protect both you and others from spreading of virus and further reduce the risk of being infected.</p>
+        <p><i class="fa fa-hospital-user"></i>&nbsp;If you show symptoms, contact your health provider immediately and schedule Covid tests! Quarantine yourself until the symptom goes away.</p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
