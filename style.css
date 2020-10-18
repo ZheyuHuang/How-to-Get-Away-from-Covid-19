@@ -1,15 +1,16 @@
 
+
 html { 
-    background: url(asset/covid.jpg) no-repeat center center fixed; 
+  }
+
+body{
+    font-family: 'Piazzolla', serif;
+    
+    /* background: url(asset/covid.jpg) no-repeat center center fixed;   */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-
-body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: url(asset/covid.jpg);
 
 }
 /* .container{
@@ -19,20 +20,53 @@ body{
     background-color: aliceblue;
 } */
 .container{
+    z-index: 1;
     display:grid;
     gap:10%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 400px ;
+    grid-row: auto;
 }
+  
+
 .card{
+    
     border-radius: 4px;
-    background: #fff;
+    background: rgb(95, 23, 26);
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  padding: 14px 80px 18px 36px;
+  padding: 20px 20px 20px 20px;
   cursor: pointer;
 }
 
 .card:hover{
      transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+h1{
+    font-family: 'Suez One', serif;
+    
+    color: rgb(241, 239, 240);
+    text-align: center;
+    vertical-align: bottom;
+}
+p{
+    color: rgb(241, 239, 240);
+}
+h5{
+    color: rgb(250, 245, 156);
+    text-align: center;
+    vertical-align: middle;
+}
+.btn.btn-outline-light{
+    margin:0 auto;
+    display:block;
+
+}
+iframe {
+position: absolute;    
+z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
