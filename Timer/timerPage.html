@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covid Game</title>
+    <title>Wash Hands Timer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500&family=Suez+One&display=swap" rel="stylesheet">
-    <script src="game.js"></script>
-    <script src="data.js"></script>
-    <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src = "timer.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5f1719;">
@@ -25,59 +22,37 @@
               <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="covidGame.html">Covid Protection Game</a>
+              <a class="nav-link" href="../CovidGame/covidGame.html">Covid Protection Game</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Covid19 Tips
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../index.html">Statistical Facts</a>
+                <a class="dropdown-item" href="#">Statistical Facts</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#instructions">How to protect yourself</a>
+                <a class="dropdown-item" href="#">How to protect yourself</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../index.html">Common symptoms of Covid</a>
+                <a class="dropdown-item" href="#">Common symptoms of Covid</a>
               </div>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> -->
             <li class="nav-item">
-                <a class="nav-link" href="../Timer/timerPage.html">Wash Hands Timer</a>
+                <a class="nav-link" href="timerPage.html">Wash Hands Timer</a>
               </li>
           </ul>
         </div>
      </nav>
 
-    <div class="intro">
-        <h1 class = "center" style="color:goldenrod"><i class="fa fa-virus"></i>Covid Protection Game</h1>
-    </div>
-    <div class="step-container">
-        <div class="step-title">
-            step
-            <div id = "step">0</div>
-        </div>
-    </div>
-
-    <div id="result"></div>
+     <h3 class="timerTitle">You need to wash hands for at least 20s!</h3>
+    <h3 class="timerTitle">Second left: <span id = "time-left">20</span></h3>
+    <div class = "timerButton"><button id = "start-button">Start</button></div>
     
-    <div class="grid"></div>
-
-    <p id = "guide">
-        <span style="font-weight: bold;">How to play: </span>This game is similar to 2048, and you can use four direction keys to play this game. You will always start with the <span style="font-weight: bold;">basic step "wash your hand at least 20s"</span> and you want to <span style="font-weight: bold;">combine the same step</span> to get a new protection method. You will win the game and protect yourself after you generate <span style="font-weight: bold;">all 5 protection</span> approaches.
-    </p>
-
-    <div id="instructions">
-        <p><i class="fa fa-hands-wash"></i>&nbsp;<strong>Wash your hands carefully! </strong><a href="#">Check our hand wash timer here!</a></p>
-        <p><i class="fa fa-pump-medical"></i>&nbsp;Clean & disinfect all surfaces using swipes! Coronavirus could live on smooth surfaces for ~2days. </p>
-        <p><i class="fa fa-laptop-house"></i>&nbsp;Stay 6 feet away from others to prevent yourself from potential virus carriers. Remember, one could be a virus carrier even if he does not have a symptom!</p>
-        <p><i class="fa fa-head-side-mask"></i>&nbsp;Even if you do not show symptoms, wear a mask to protect both you and others from spreading of virus and further reduce the risk of being infected.</p>
-        <p><i class="fa fa-hospital-user"></i>&nbsp;If you show symptoms, contact your health provider immediately and schedule Covid tests! Quarantine yourself until the symptom goes away.</p>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-
 </body>
 </html>

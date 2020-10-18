@@ -1,0 +1,12 @@
+.timerTitle{
+    text-align: center;
+    padding: 10px;
+}
+
+.timerButton{
+    text-align: center;
+}
+
+body{
+    background-color: rgb(241, 234, 224);
+}
