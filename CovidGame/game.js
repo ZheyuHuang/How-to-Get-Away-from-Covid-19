@@ -132,8 +132,12 @@ document.addEventListener('DOMContentLoaded', () =>{
             if(squares[i].innerHTML === squares[i+1].innerHTML){
                 let combinedTotal = 0;
                 for (j=0;j<CovidPrevention.length;j++){
+                    console.log($(squares[i]).html())
+                    console.log(squares[i].innerHTML)
+                    console.log($(squares[i]).html(`${CovidPrevention[j].text}`))
                     if (squares[i].innerHTML === CovidPrevention[j].text){
-                        combinedTotal = CovidPrevention[j+1].text
+                        //combinedTotal = CovidPrevention[j+1].text
+                        $(squares[i]).html(`${CovidPrevention[j].text}`)
                     }
                 }
                 //console.log(combinedTotal)
