@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const width = 4
     let squares = []
     let step = 0
+    let move = false;
 
     //create a playboard
     function createBoard() {
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     //swipe rights
     function moveRight() {
-        let moved = false;
         for(let i=0; i<width*width; i++){
             if (i%width === 0) {
                 let row = []
@@ -45,17 +45,22 @@ document.addEventListener('DOMContentLoaded', () =>{
                 let missing = 4 - filteredRow.length
                 let zeros = Array(missing).fill(0)
 
+                //test if a move is needed
+                for(k=missing;k<width;k++){
+                    if(squares[i+k].innerHTML == 0){
+                        move = true;
+                    }
+                }
+
                 let newRow = zeros.concat(filteredRow)
                 //console.log(newRow)
 
                 for (j=0;j<width;j++){
                     squares[i+j].innerHTML = newRow[j]
-                    moved = true;
                 }
 
             }
         }
-        return moved;
     }
 
     //swipe left
@@ -72,6 +77,13 @@ document.addEventListener('DOMContentLoaded', () =>{
 
                 let missing = 4 - filteredRow.length
                 let zeros = Array(missing).fill(0)
+
+                //test if a move is needed
+                for(k=0;k<missing;k++){
+                    if(squares[i+k].innerHTML == 0){
+                        move = true;
+                    }
+                }
 
                 let newRow = filteredRow.concat(zeros)
                 //console.log(newRow)
@@ -96,6 +108,13 @@ document.addEventListener('DOMContentLoaded', () =>{
             let filteredColumn = column.filter(a => a !== '0')
             let missing = 4 - filteredColumn.length
             let zeros = Array(missing).fill(0)
+
+                //test if a move is needed
+                for(k=missing;k<width;k++){
+                    if(squares[i+width*k].innerHTML == 0){
+                        move = true;
+                    }
+                }
             let newColumn = zeros.concat(filteredColumn)
 
             for (j=0;j<width;j++){
@@ -117,14 +136,19 @@ document.addEventListener('DOMContentLoaded', () =>{
             //console.log(filteredColumn)
             let missing = 4 - filteredColumn.length
             let zeros = Array(missing).fill(0)
-            let newColumn = filteredColumn.concat(zeros)
-            //console.log(newColumn)
 
+                //test if a move is needed
+                for(k=0;k<missing;k++){
+                    if(squares[i+width*k].innerHTML == 0){
+                        move = true;
+                    }
+                }
+
+            let newColumn = filteredColumn.concat(zeros)
             for (j=0;j<width;j++){
                 squares[i+width*j].innerHTML = newColumn[j]
             }
         }
-        return moved;
     }
 
     function combinedRow(){
@@ -132,12 +156,12 @@ document.addEventListener('DOMContentLoaded', () =>{
             if(squares[i].innerHTML === squares[i+1].innerHTML){
                 let combinedTotal = 0;
                 for (j=0;j<CovidPrevention.length;j++){
-                    console.log($(squares[i]).html())
-                    console.log(squares[i].innerHTML)
-                    console.log($(squares[i]).html(`${CovidPrevention[j].text}`))
+                    //console.log($(squares[i]).html())
+                    //console.log(squares[i].innerHTML)
+                    //console.log($(squares[i]).html(`${CovidPrevention[j].text}`))
                     if (squares[i].innerHTML === CovidPrevention[j].text){
-                        //combinedTotal = CovidPrevention[j+1].text
-                        $(squares[i]).html(`${CovidPrevention[j].text}`)
+                        combinedTotal = CovidPrevention[j+1].text
+                        //$(squares[i]).html(`${CovidPrevention[j].text}`)
                     }
                 }
                 //console.log(combinedTotal)
@@ -146,7 +170,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 
             }
         }
-        step +=1
+        if(move == true){
+            step +=1
+        }
         stepDisplay.innerHTML = step
         checkForWin()
     }
@@ -164,7 +190,9 @@ document.addEventListener('DOMContentLoaded', () =>{
                 squares[i+width].innerHTML = 0
             }
         }
-        step +=1;
+        if(move == true){
+            step +=1
+        }
         stepDisplay.innerHTML = step;
         checkForWin()
     }
@@ -184,33 +212,43 @@ document.addEventListener('DOMContentLoaded', () =>{
     document.addEventListener('keyup',control)
 
     function keyRight(){
-        tf = moveRight();
+        moveRight();
         combinedRow()
         moveRight()
-        if (tf){
-        generate()
+        if(move == true){
+            generate()
         }
+        move = false;
     }
 
     function keyLeft(){
         moveLeft()
         combinedRow()
         moveLeft()
-        generate()
+        if(move == true){
+            generate()
+        }
+        move = false;
     }
 
     function keyDown(){
         moveDown()
         combinedColumn()
         moveDown()
-        generate()
+        if(move == true){
+            generate()
+        }
+        move = false;
     }
 
     function keyUp(){
         moveUp()
         combinedColumn()
         moveUp()
-        generate()
+        if(move == true){
+            generate()
+        }
+        move = false;
     }
 
     //check for the number 2048 in the squares to win
