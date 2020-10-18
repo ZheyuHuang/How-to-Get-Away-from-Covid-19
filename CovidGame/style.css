@@ -20,18 +20,18 @@ body{
     flex-wrap: wrap;
     background-color: goldenrod;
     padding: 5px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .grid div { 
-    width:100px;
-    height: 100px;
+    width:90px;
+    height: 90px;
     background-color: antiquewhite;
     font-size: 15px;
     text-align: center;
     vertical-align: middle;
     font-weight: bold;
-
+    margin:5px;
 }
 
 .step-container{
