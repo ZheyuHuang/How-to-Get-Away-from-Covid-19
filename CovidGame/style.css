@@ -8,6 +8,15 @@
     width: 400px;
     
 }
+#result{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    background-color: red;
+    margin-bottom: 3mm;
+    font-weight: bold;
+    font-size: large;
+}
 
 body{
     background-color: rgb(241, 234, 224);
