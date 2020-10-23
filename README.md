@@ -1,4 +1,4 @@
-###### [Click to visit](https://zheyuhuang.github.io/How-to-Get-Away-from-Covid-19/)
+###### Won the Best Hardware Hack at HackNC 2020
 ---
 # Inspiration
 The United States has the highest number of Covid-19 cases around the world. It’s been almost half a year since the huge outbreak in the United States but we still see the curve of cases not slowing down. It is critical to educate the public about the basic facts and approaches of prevention to stop further spread of the disease. So we created a Covid-19 Toolkit to help people of all ages learn basic statistics, symptoms, and prevention of Covid-19.
